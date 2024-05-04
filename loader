@@ -1,6 +1,7 @@
 spawn(function ()
 			while _G.Autofarm == true do
 				loadstring(game:HttpGet"https://raw.githubusercontent.com/opim80/autofarmng/main/main")()
-				wait(2)
+				wait(1)
+				print("looping")
 			end
 		end)
