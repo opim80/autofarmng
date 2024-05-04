@@ -1,0 +1,82 @@
+local UserInputService = game:GetService("UserInputService")
+local teleport_table = {
+            location1 = Vector3.new(-806.868, 1230.786, -132.21), 
+            location2 = Vector3.new(-844.075, 1231.161, -182.544),
+            location3 = Vector3.new(-896.466, 1231.832, -162.573),
+            location4 = Vector3.new(-873.882, 1231.441, 4.24),
+            location5 = Vector3.new(-696.611, 1232.001, -110.221),
+            location6 = Vector3.new(-690.59, 1232.259, -269.139),
+            location7 = Vector3.new(-638.327, 1231.08, -132.986),
+            location8 = Vector3.new(-729.634, 1231.111, -27.516),
+            location9= Vector3.new(-685.728, 1231.08, -45.517),
+            location10 = Vector3.new(-873.776, 1231.378, -116.768),
+            location11 = Vector3.new(-843.525, 1231.857, -56.014),
+            location12 = Vector3.new(-860.115, 1242.161, -326.623),
+            location13 = Vector3.new(-635.824, 1230.952, -30.684)
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(0.001,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                -- a.Completed:Wait()
+                -- print('Teleporting Done!')
+            end
+        end
+        bypass_teleport(teleport_table.location1)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(false, "E", false, game) --// unholds
+        bypass_teleport(teleport_table.location2)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location3)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location4)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location5)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location6)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location7)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location8)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location9)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location10)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location11)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location12)
+        wait(0.5)
+        game:GetService("VirtualInputManager"):SendKeyEvent(true, "E", false, game) --// holds
+        wait(0.5)
+        bypass_teleport(teleport_table.location13)
