@@ -1,0 +1,6 @@
+spawn(function ()
+			while _G.Autofarm == true do
+				loadstring(game:HttpGet"https://raw.githubusercontent.com/opim80/autofarmng/main")()
+				wait(2)
+			end
+		end)
